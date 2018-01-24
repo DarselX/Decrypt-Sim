@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LoadingScreen</name>
+    <events>
+        <event-block sid="786241405655019">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="179836163591652" type="System" />
+            </conditions>
+            <actions>
+                <action id="-6" name="Set height" sid="567746398049929" type="LoadingBar_BG">
+                    <param id="0" name="Height">clamp(0,(loadingprogress * 1100),1100)</param>
+                </action>
+                <action id="-5" name="Set width" sid="133760913631171" type="LoadingBar_Loader">
+                    <param id="0" name="Width">clamp(0,(loadingprogress * 1752),1752)</param>
+                </action>
+                <action id="0" name="Set text" sid="728409547968329" type="LoadingBar_Percentage">
+                    <param id="0" name="Text">round((loadingprogress * 100)) &amp; &quot; %&quot;</param>
+                </action>
+                <action id="-1" name="Set X" sid="881037780108372" type="LoadingBar_Percentage">
+                    <param id="0" name="X">LoadingBar_Loader.Width + 36</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136984294891471">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="249160480810680" type="System">
+                    <param id="0" name="First value">loadingprogress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="224028214062370" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="762025807056033" type="System">
+                    <param id="0" name="Layout">PlayerAuswahl</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

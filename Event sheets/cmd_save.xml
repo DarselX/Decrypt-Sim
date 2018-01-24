@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cmd_save</name>
+    <events>
+        <include>_clearcmdfeld</include>
+        <include>WriteLines</include>
+        <variable constant="0" name="SaveGame" sid="111569131083903" static="0" type="text"></variable>
+        <event-group description="" sid="228585177275656" title="Save State">
+            <sub-events>
+                <event-block sid="637771297223837">
+                    <conditions>
+                        <condition id="0" name="On function" sid="556948572135401" type="Function">
+                            <param id="0" name="Name">&quot;cmd_savegame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="810392136129792">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="549059861530747">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="620181104608436" type="Function">
+                                            <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;{###}&quot;Speichert das Spiel zum aktuellen Zeitpunkt!&quot;{###}&quot;&quot;{###}&quot;SAVE&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="933972686763798" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="223860882756711">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="263004899728178" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="414171058241886" type="CMD_TextFeld">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-36" name="Save" sid="189787588764060" type="System">
+                                            <param id="0" name="Slot">&quot;save&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

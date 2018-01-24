@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlayerSelection</name>
+    <events>
+        <include>ApiKeyGenerator</include>
+        <include>NewPlayer</include>
+        <variable constant="0" name="LoginState" sid="491056333117485" static="0" type="text"></variable>
+        <variable constant="0" name="UserID" sid="204028416073713" static="0" type="number">0</variable>
+        <event-group description="" sid="912189155283727" title="Login">
+            <sub-events>
+                <event-block sid="962367612074738">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="349950835347073" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="949830078555844" type="Audio">
+                            <param id="0" name="Audio file">ANGL-FireBurst</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="856357993673897" type="PlayerSelection_Headline">
+                            <param id="0" name="Text">&quot;█▀▀▄ █▀▀ █▀▀ █▀▀█ █░░█ █▀▀█ ▀▀█▀▀   █▀▀ ░▀░ █▀▄▀█&quot; &amp; newline &amp; &quot;█░░█ █▀▀ █░░ █▄▄▀ █▄▄█ █░░█ ░░█░░   ▀▀█ ▀█▀ █░▀░█&quot; &amp; newline &amp; &quot;▀▀▀░ ▀▀▀ ▀▀▀ ▀░▀▀ ▄▄▄█ █▀▀▀ ░░▀░░   ▀▀▀ ▀▀▀ ▀░░░▀&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="411077207461164" type="PlayerSelection_Headline2">
+                            <param id="0" name="Text">PlayerSelection_Headline.Text</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="611283730692118" type="PlayerSelection_User">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;#00e9ff&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="928416538369251" type="PlayerSelection_User">
+                            <param id="0" name="Property name">&quot;background&quot;</param>
+                            <param id="1" name="Value">&quot;transparent&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="910952011783838" type="PlayerSelection_User">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;24px&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="982912444299694" type="PlayerSelection_Pass">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;#00e9ff&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="761300409727889" type="PlayerSelection_Pass">
+                            <param id="0" name="Property name">&quot;background&quot;</param>
+                            <param id="1" name="Value">&quot;transparent&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="263434281801406" type="PlayerSelection_Pass">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;24px&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="708245878924434" type="PlayerSelection_LoginButon">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;#00e9ff&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="841754403749074" type="PlayerSelection_LoginButon">
+                            <param id="0" name="Property name">&quot;background&quot;</param>
+                            <param id="1" name="Value">&quot;#222222&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="185928272966061" type="PlayerSelection_LoginButon">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;18px&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390532113980008">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="721721654289906" type="Mouse">
+                            <param id="0" name="Object">PlayerSelection_TextButton</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="123171218888004" type="System">
+                            <param id="0" name="First value">PlayerSelection_TextButton.ButtonID</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="798871140981955" type="PlayerSelection_TextButton">
+                            <param id="0" name="Color">&quot;rgb(230, 255, 255)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137004209461264">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="168053532701743" type="Mouse">
+                            <param id="0" name="Object">PlayerSelection_TextButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="149081075320471" type="PlayerSelection_TextButton">
+                            <param id="0" name="Color">&quot;rgb(102, 255, 255)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="317907981985754">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="107700105876911" type="PlayerSelection_LoginButon" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="785414437882560" type="Loader">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="866033201426503" type="Function">
+                            <param id="0" name="Name">&quot;ApiKey&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerSelection_User.Text{###}PlayerSelection_Pass.Text</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="161835103045522" type="System">
+                            <param id="0" name="Tag">&quot;APIREADY&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="544439119765929" type="AJAX">
+                            <param id="0" name="Tag">&quot;Login&quot;</param>
+                            <param id="1" name="URL">&quot;_usr.php?data=&quot;&amp;SendVal</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="241002263205218">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="240226169855691" type="AJAX">
+                            <param id="0" name="Tag">&quot;Login&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="385524942158930" type="System">
+                            <param id="0" name="Variable">LoginState</param>
+                            <param id="1" name="Value">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="902260281992429">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="313276752273304" type="System">
+                                    <param id="0" name="First value">int(LoginState)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="819404244482607" type="PlayerSelection_LoginButon" />
+                                <action id="-9" name="Destroy" sid="990553886714123" type="PlayerSelection_Pass" />
+                                <action id="5" name="Set read-only" sid="675986713368040" type="PlayerSelection_User">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="4" name="Set visible" sid="482307073779963" type="PlayerSelection_NoUser">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="326523220934350" type="System">
+                                    <param id="0" name="Variable">UserID</param>
+                                    <param id="1" name="Value">int(LoginState)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="556084920836410" type="Loader">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="800587040093425" type="System">
+                                    <param id="0" name="Layout">CommandScreen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="408445708572651">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="694402969031980" type="System">
+                                    <param id="0" name="First value">LoginState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;0&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set visible" sid="210642490307808" type="PlayerSelection_NoUser">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="577116079493780" type="PlayerSelection_NoUser">
+                                    <param id="0" name="Text">&quot;Ihr Account ist noch nicht Freigegeben. Bitte folgen Sie den Anweisungen in der Aktivierungsmail!&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="941363365422277" type="Loader">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="283141443024566">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="107263933629419" type="System">
+                                    <param id="0" name="First value">LoginState</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">&quot;-1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set visible" sid="668814011469466" type="PlayerSelection_NoUser">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="760188103849730" type="PlayerSelection_NoUser">
+                                    <param id="0" name="Text">&quot;Accountname oder Passwort falsch!&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="321502978771951" type="Loader">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="125504807573240" title="Create New Player">
+            <sub-events>
+                <event-block sid="280079932203746">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="596864844685519" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">PlayerSelection_TextButton</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="149666567608122" type="PlayerSelection_TextButton">
+                            <param id="0" name="Instance variable">ButtonID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="425875545403895" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="310780617738451" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

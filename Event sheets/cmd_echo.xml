@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cmd_echo</name>
+    <events>
+        <variable constant="0" name="echo" sid="452424473773269" static="0" type="number">1</variable>
+        <include>_clearcmdfeld</include>
+        <event-group description="" sid="593227436742101" title="ECHO">
+            <sub-events>
+                <variable constant="0" name="cmd" sid="969715777386732" static="0" type="text"></variable>
+                <event-block sid="666394907075964">
+                    <conditions>
+                        <condition id="0" name="On function" sid="204988865425061" type="Function">
+                            <param id="0" name="Name">&quot;cmd_print&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="857887865572916">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="369731353100232">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="438014293097634" type="System">
+                                            <param id="0" name="Variable">echo</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="630987278034348" type="Function">
+                                            <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="352553915775409" type="System">
+                                            <param id="0" name="Variable">echo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="511181358153946" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="926834144413802">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="634599834855292" type="System">
+                                            <param id="0" name="Variable">echo</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="103768075101578" type="Function">
+                                            <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="663383178844835" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="272004258236518">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="753945670217236" type="Function">
+                                            <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;{###}&quot;Zeigt Meldungen an oder schaltet die Befehlsanzeige ein (ON) oder aus (OFF).&quot;{###}&quot;&quot;{###}&quot;     ECHO [ON | OFF]&quot;{###}&quot;     ECHO [Meldung]&quot;{###}&quot;&quot;{###}&quot;ECHO ohne Parameter zeigt die aktuelle Einstellung der Befehlsanzeige an.&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="879544388069442" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="882313535136663">
+                                    <conditions />
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="484667937442078">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="876980981137484" type="System">
+                                                    <param id="0" name="Variable">echo</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="285350245836028" type="Function">
+                                                    <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;ECHO ist ausgeschaltet (OFF).&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="251168017611861" type="Function">
+                                                    <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="791662720206155">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="749644257201836" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="604507960226208" type="Function">
+                                                    <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;ECHO ist eingeschaltet (ON).&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="464844396484156" type="Function">
+                                                    <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="388070608102051">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="293198009958885" type="System">
+                                            <param id="0" name="Variable">cmd</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="209920873700254" type="System">
+                                            <param id="0" name="Variable">cmd</param>
+                                            <param id="1" name="Value">replace(cmd,&quot;echo &quot;,&quot;&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="712315301225665" type="CMD_TextFeld">
+                                            <param id="0" name="Text">self.Text &amp; newline &amp; cmd</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="888600509435938" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

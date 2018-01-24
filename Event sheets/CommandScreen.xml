@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CommandScreen</name>
+    <events>
+        <include>_commands</include>
+        <include>OpenFile_EV</include>
+        <event-group description="" sid="432328441268721" title="Send CMD">
+            <sub-events>
+                <event-block sid="809333292054969">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="771479801578082" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="936158062730154" type="Function">
+                            <param id="0" name="Name">&quot;rec_cmd&quot;</param>
+                            <param id="1" name="Parameter {n}">CMD_CommandLine.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="319011939212992">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="516061297373589" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Scroll bottom" sid="884734741473448" type="CMD_TextFeld" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

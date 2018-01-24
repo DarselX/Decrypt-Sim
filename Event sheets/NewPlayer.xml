@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NewPlayer</name>
+    <events>
+        <include>ApiKeyGenerator</include>
+        <event-group description="" sid="170411778416542" title="New User Dialog verlassen">
+            <sub-events>
+                <event-block sid="495588575846046">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="762065971222679" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">PlayerCreation_Back</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="934180325910379" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="323964080716470" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="451377752406671" title="New Player Functions">
+            <sub-events>
+                <event-block sid="675098559841871">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="154945053388131" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set CSS style" sid="490651459118662" type="PlayerCreation_AGB">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;#00ff00&quot;</param>
+                        </action>
+                        <action id="0" name="Set URL" sid="809895068415496" type="PlayerCreation_AGBFrame">
+                            <param id="0" name="URL">&quot;agb.html&quot;</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="786727193378023" type="PlayerCreation_Back">
+                            <param id="0" name="&apos;On&apos; time">1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">Infinity</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519859262640598">
+                    <conditions>
+                        <condition id="1" name="Is checked" sid="691681635196513" type="PlayerCreation_AGB" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="550262840436188" type="PlayerCreation_AGBFrame">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="554551808619721">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is checked" sid="265253448288266" type="PlayerCreation_AGB" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="940888506453782" type="PlayerCreation_AGBFrame">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="236930977458590" title="New User Senden">
+            <sub-events>
+                <variable constant="0" name="rhc" sid="816840065648173" static="0" type="text"></variable>
+                <variable constant="0" name="CheckVal" sid="568614326120530" static="0" type="text"></variable>
+                <variable constant="0" name="ApiKey" sid="843381957548662" static="0" type="text"></variable>
+                <variable constant="0" name="CheckResult" sid="272767399845048" static="0" type="number">0</variable>
+                <event-block sid="106149062797702">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="592499021795425" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">PlayerCreation_Senden</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="672563720105192" type="PlayerCreation_Senden" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="146917835073301">
+                            <conditions>
+                                <condition id="1" name="Is checked" sid="859027801271851" type="PlayerCreation_AGB" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="573917888684185" type="PlayerCreation_AGBFrame" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="930395257597573">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="801216267403617" type="PlayerCreation_Label">
+                                            <param id="0" name="Instance variable">LabelID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set visible" sid="562805594338128" type="PlayerCreation_Label">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="621143782171592">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="352615841568573" type="System">
+                                            <param id="0" name="First value">PlayerCreation_Passwd1.Text</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">PlayerCreation_Passwd2.Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="295673524316175">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="668021991068100" type="PlayerCreation_Label">
+                                                    <param id="0" name="Instance variable">LabelID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set visible" sid="921860344259047" type="PlayerCreation_Label">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="402475788246803" type="System">
+                                                    <param id="0" name="Variable">ApiKey</param>
+                                                    <param id="1" name="Value">Function.Call(&quot;ApiKey&quot;,PlayerCreation_Mail.Text,PlayerCreation_Name.Text)</param>
+                                                </action>
+                                                <action id="0" name="Request URL" sid="920899335367377" type="AJAX">
+                                                    <param id="0" name="Tag">&quot;UserMailCheck&quot;</param>
+                                                    <param id="1" name="URL">&quot;usrmailcheck.php?data=&quot;&amp;ApiKey&amp;&quot; &quot;&amp;PlayerCreation_Mail.Text&amp;&quot; &quot;&amp;PlayerCreation_Name.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="295666714419601">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="951950347947229" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="105208151920048">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="914664245675290" type="PlayerCreation_Label">
+                                                    <param id="0" name="Instance variable">LabelID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set visible" sid="350796409478677" type="PlayerCreation_Label">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="674548400525216">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is checked" sid="309610480333718" type="PlayerCreation_AGB" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="427580537445493">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="295379187796580" type="PlayerCreation_Label">
+                                            <param id="0" name="Instance variable">LabelID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set visible" sid="518930742621197" type="PlayerCreation_Label">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="216519365876490">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="521797994675641" type="AJAX">
+                            <param id="0" name="Tag">&quot;UserMailCheck&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="772506792370805" type="System">
+                            <param id="0" name="Variable">CheckVal</param>
+                            <param id="1" name="Value">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="105587198916581">
+                            <conditions>
+                                <condition id="0" name="Switch" sid="320376095146702" type="PlayerCreation_Switch">
+                                    <param id="0" name="Variable">CheckVal</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="690042002533995">
+                                    <conditions>
+                                        <condition id="6" name="Case compare" sid="907593587528071" type="PlayerCreation_Switch">
+                                            <param id="0" name="Is switch variable">0</param>
+                                            <param id="1" name="Value">&quot;FAIL&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="218019426780989">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="319051185714443" type="PlayerCreation_Label">
+                                                    <param id="0" name="Instance variable">LabelID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set visible" sid="416575971191207" type="PlayerCreation_Label">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="209355331024925">
+                                    <conditions>
+                                        <condition id="6" name="Case compare" sid="439254928333316" type="PlayerCreation_Switch">
+                                            <param id="0" name="Is switch variable">0</param>
+                                            <param id="1" name="Value">&quot;OK&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="829108756342333" type="System">
+                                            <param id="0" name="Variable">ApiKey</param>
+                                            <param id="1" name="Value">Function.Call(&quot;ApiKey&quot;,PlayerCreation_Mail.Text,PlayerCreation_Name.Text, PlayerCreation_Passwd2.Text)</param>
+                                        </action>
+                                        <action id="0" name="Request URL" sid="400644148848156" type="AJAX">
+                                            <param id="0" name="Tag">&quot;CreateNewUser&quot;</param>
+                                            <param id="1" name="URL">&quot;crusr.php?data=&quot;&amp;ApiKey&amp;&quot; &quot;&amp;PlayerCreation_Mail.Text&amp;&quot; &quot;&amp;PlayerCreation_Name.Text&amp;&quot; &quot;&amp;PlayerCreation_Passwd2.Text</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="238255653037363">
+                                    <conditions>
+                                        <condition id="4" name="Default" sid="614698823237661" type="PlayerCreation_Switch" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="751389877021237">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="398740632175376" type="PlayerCreation_Label">
+                                                    <param id="0" name="Instance variable">LabelID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set visible" sid="967816342296922" type="PlayerCreation_Label">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="646261692023298" type="PlayerCreation_Label">
+                                                    <param id="0" name="Text">AJAX.LastData</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="624252961821529">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="809479996974926" type="AJAX">
+                            <param id="0" name="Tag">&quot;CreateNewUser&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="571400687662110" type="System">
+                            <param id="0" name="Variable">rhc</param>
+                            <param id="1" name="Value">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="965643975459815" type="AJAX">
+                            <param id="0" name="Tag">&quot;SendNewPlayerLink&quot;</param>
+                            <param id="1" name="URL">&quot;https://darselx.lima-city.de/sendmail.php?&quot; &amp;  &quot;mail_to=&quot;&amp;PlayerCreation_Mail.Text&amp;&quot;&amp;subject=Account Aktivierung DecryptSim&amp;message=Bitte kopieren Sie folgenden Link in Ihren Browser: https://darselx-gaming.ddnss.de/games/DecryptSim/activation.php?key=&quot;&amp;rhc</param>
+                        </action>
+                        <action id="4" name="Set visible" sid="709138419376040" type="PlayerCreation_RegOk">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="460522874647930" type="PlayerCreation_RegOk">
+                            <param id="0" name="Text">&quot;Registration erfolgreich. Bitte aktiviere deinen Account mit dem Link in der Mail, die wir dir gerade geschickt haben!   --&gt;   &quot;&amp;AJAX.LastData</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="869075425043335" type="PlayerCreation_Senden">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

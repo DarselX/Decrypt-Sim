@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cmd_web</name>
+    <events>
+        <include>WriteLines</include>
+        <include>_clearcmdfeld</include>
+        <event-group description="" sid="988908372135068" title="Web Browse">
+            <sub-events>
+                <event-block sid="253686314157802">
+                    <conditions>
+                        <condition id="0" name="On function" sid="764959704538681" type="Function">
+                            <param id="0" name="Name">&quot;cmd_web&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="942869791219720">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="704762338532989">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="494987334785119" type="Function">
+                                            <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;{###}&quot;Öffnet den WebBrowser mit angegebener Adresse.&quot;{###}&quot;&quot;{###}&quot;WEB [Url]&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="426488019888686" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="946330940107019">
+                                    <conditions />
+                                    <actions>
+                                        <action id="29" name="Open browser" sid="997192322489254" type="NWjs">
+                                            <param id="0" name="URL">replace(Function.Param(0),&quot;web &quot;,&quot;&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="323017057344748" type="Function">
+                                            <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Öffne URL: &quot; &amp; replace(Function.Param(0),&quot;web &quot;,&quot;&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="448697155876049" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

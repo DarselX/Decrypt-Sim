@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_clearcmdfeld</name>
+    <events>
+        <event-group description="" sid="953882506224327" title="Clear CMD Feld">
+            <sub-events>
+                <event-block sid="564446743489367">
+                    <conditions>
+                        <condition id="0" name="On function" sid="735069804629373" type="Function">
+                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="967183553027104" type="CMD_CommandLine">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

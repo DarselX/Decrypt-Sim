@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>OpenFile_EV</name>
+    <events>
+        <event-group description="" sid="702523749724454" title="Initialize">
+            <sub-events>
+                <event-block sid="879934748558423">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="595160698791544" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="145781698346944" type="FileOpener_Headline">
+                            <param id="0" name="Pin to">FileOpener_Background</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="708083721292015" type="FileOpener_BG_Wallpaper">
+                            <param id="0" name="Pin to">FileOpener_Background</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="765345322720862" type="FileOpener_MG">
+                            <param id="0" name="Pin to">FileOpener_Background</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="551419266823456" type="OpenFile">
+                            <param id="0" name="Pin to">FileOpener_Background</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="706340948503003" type="FileOpener_Close">
+                            <param id="0" name="Pin to">FileOpener_Background</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="204589966307105" title="FileOpener">
+            <sub-events>
+                <event-group description="" sid="857819438326601" title="Close">
+                    <sub-events>
+                        <event-block sid="716408755039825">
+                            <conditions>
+                                <condition id="0" name="On function" sid="609121541763716" type="Function">
+                                    <param id="0" name="Name">&quot;CloseFileChooser&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="501906317068797" type="FileOpener_Background">
+                                    <param id="0" name="X">-1000</param>
+                                    <param id="1" name="Y">-1000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="528825394215054">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="691842845679473" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">FileOpener_Close</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="886072467983546" type="Function">
+                                    <param id="0" name="Name">&quot;CloseFileChooser&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="857682308656752" title="Open">
+                    <sub-events>
+                        <event-block sid="811328123387105">
+                            <conditions>
+                                <condition id="0" name="On function" sid="322927514408128" type="Function">
+                                    <param id="0" name="Name">&quot;OpenFileChooser&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="390307401819667">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="365227576711433" type="System">
+                                            <param id="0" name="First value">FileOpener_Background.PosX</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="123714870471572" type="FileOpener_Background">
+                                            <param id="0" name="X">WindowWidth / 2 - FileOpener_Background.Width / 2</param>
+                                            <param id="1" name="Y">WindowHeight / 2 - FileOpener_Background.Height / 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="818065629131967">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="286853392281062" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="832504630938918" type="FileOpener_Background">
+                                            <param id="0" name="X">FileOpener_Background.PosX</param>
+                                            <param id="1" name="Y">FileOpener_Background.PosY</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="274733318082704">
+                    <conditions>
+                        <condition id="0" name="On changed" sid="132899668454273" type="OpenFile" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="125955571528805" type="FileOpener_Background">
+                            <param id="0" name="Instance variable">FileName</param>
+                            <param id="1" name="Value">OpenFile.FileNameAt(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="580182147031261" type="FileOpener_Background">
+                            <param id="0" name="Instance variable">FileSize</param>
+                            <param id="1" name="Value">OpenFile.FileSizeAt(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="171527476707876" type="FileOpener_Background">
+                            <param id="0" name="Instance variable">FilePath</param>
+                            <param id="1" name="Value">OpenFile.FileURLAt(0)</param>
+                        </action>
+                        <action id="6" name="SHA-1 - hash" sid="522036641914295" type="CBHash">
+                            <param id="0" name="String">FileOpener_Background.FileName &amp; &quot;/&quot; &amp;  FileOpener_Background.FileSize &amp; &quot;/&quot; &amp; FileOpener_Background.FilePath</param>
+                            <param id="1" name="Format">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="865919293951524" type="FileOpener_Background">
+                            <param id="0" name="Instance variable">FileHash</param>
+                            <param id="1" name="Value">CBHash.get_lastResult</param>
+                        </action>
+                        <action id="0" name="Call function" sid="885091571557025" type="Function">
+                            <param id="0" name="Name">&quot;CloseFileChooser&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="156771740509887" title="Move">
+                    <sub-events>
+                        <event-block sid="660463354876502">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="741956861275704" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" sid="830951150312345" type="Mouse">
+                                    <param id="0" name="Object">FileOpener_Background</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="382547648210981" type="Keyboard">
+                                    <param id="0" name="Key">16 (Umschalt)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="946968799815530" type="FileOpener_Background">
+                                    <param id="0" name="X">Mouse.X - FileOpener_Background.Width / 2</param>
+                                    <param id="1" name="Y">Mouse.Y - 20</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="852704683566514" type="FileOpener_Background">
+                                    <param id="0" name="Instance variable">PosX</param>
+                                    <param id="1" name="Value">Mouse.X - FileOpener_Background.Width / 2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="737388019493041" type="FileOpener_Background">
+                                    <param id="0" name="Instance variable">PosY</param>
+                                    <param id="1" name="Value">Mouse.Y - 20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

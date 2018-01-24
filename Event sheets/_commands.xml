@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_commands</name>
+    <events>
+        <event-group description="" sid="212748802966068" title="Command Includes">
+            <sub-events>
+                <include>cmd_web</include>
+                <include>cmd_save</include>
+                <include>_clearcmdfeld</include>
+                <include>cmd_cls</include>
+                <include>cmd_echo</include>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="incomming_cmd" sid="952519481387251" static="0" type="text"></variable>
+        <event-group description="" sid="602141771882084" title="Command Pool">
+            <sub-events>
+                <event-block sid="119719594828979">
+                    <conditions>
+                        <condition id="0" name="On function" sid="638691455723706" type="Function">
+                            <param id="0" name="Name">&quot;rec_cmd&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="404220330130709" type="System">
+                            <param id="0" name="Variable">incomming_cmd</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="426309859083707">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="526830270000075">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="714530552546611" type="Function">
+                                            <param id="0" name="Name">&quot;cmd_print&quot;</param>
+                                            <param id="1" name="Parameter {n}">incomming_cmd</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="946156301818497" type="System">
+                                            <param id="0" name="Variable">incomming_cmd</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="491263870524950">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="927930832150002" type="Function">
+                                            <param id="0" name="Name">&quot;cmd_cls&quot;</param>
+                                            <param id="1" name="Parameter {n}">incomming_cmd</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="817963919567536" type="System">
+                                            <param id="0" name="Variable">incomming_cmd</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="639348996480236">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="756303402802592" type="Function">
+                                            <param id="0" name="Name">&quot;cmd_savegame&quot;</param>
+                                            <param id="1" name="Parameter {n}">incomming_cmd</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="719297625549523" type="System">
+                                            <param id="0" name="Variable">incomming_cmd</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="618935454821084">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="190240116565215" type="Function">
+                                            <param id="0" name="Name">&quot;cmd_web&quot;</param>
+                                            <param id="1" name="Parameter {n}">incomming_cmd</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="840963210193911" type="System">
+                                            <param id="0" name="Variable">incomming_cmd</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="788251509705935">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="457127801008578" type="Function">
+                                            <param id="0" name="Name">&quot;WriteLines&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Der Befehll &apos;&apos;&quot; &amp; incomming_cmd &amp; &quot;&apos;&apos; ist entweder falsch geschrieben oder&quot;{###}&quot;konnte nicht gefunden werden.&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="222365027475811" type="Function">
+                                            <param id="0" name="Name">&quot;cls_cmd&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Decrypt Sim</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Kyatric@gmail.com - JavaScript implementation of the RSA Data Security, Inc. MD5 Message: Copyright (c) 1998 - 2009, Paul Johnston &amp; Contributors - A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined in FIPS 180-1 - Version 2.2 Copyright Paul Johnston 2000 - 2009 &amp; contributors - A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined in FIPS 180-2 * Version 2.2 Copyright Angel Marin, Paul Johnston &amp; contributors 2000 - 2009. * Distributed under the BSD License * See http://pajhome.org.uk/crypt/md5 for details. * Also http://anmar.eu.org/projects/jssha2/" id="CBhash" version="1">CB Hash</plugin>
+        <plugin author="Gregory Georges" id="DialogBox" version="1">Dialog Box</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Jesse Johnston, JP Deblonde" id="HTML_iFrame_Pode" version="1.419999957">HTML_iFrame_Pode</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra (default) | Gregory Georges (v1.0) | PlayLive (v2.0)" id="TextBoxAddon" version="1.919999957">Text box addon</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Armaldio" id="armaldio_mail" version="1">Mail</plugin>
+        <plugin author="Gigatron" id="c2loader" version="1">Loader</plugin>
+        <plugin author="Scirra" id="filechooser" version="1">File chooser</plugin>
+        <plugin author="Rex.Rainbow" id="rex_bbcodeText" version="0.100000001">BBcode Text</plugin>
+        <plugin author="Wastrel" id="wastrel_switchcase" version="1">SwitchCase</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="alphaclamp">Alpha clamp</effect>
+        <effect author="Evan Wallace" id="colorhalftone">Color halftone</effect>
+        <effect author="Scirra" id="difference">Difference</effect>
+        <effect author="Scirra" id="exclusion">Exclusion</effect>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
+        <effect author="Scirra" id="pixellate">Pixellate</effect>
+        <effect author="Scirra" id="scanlines">Scan lines</effect>
+        <effect author="Scirra" id="screen">Screen</effect>
+        <effect author="Brad Larson" id="sharpen">Sharpen</effect>
+        <effect author="Scirra" id="softlight">Soft Light</effect>
+        <effect author="Scirra" id="subtract">Subtract</effect>
+        <effect author="Evan Wallace" id="vibrance">Vibrance</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
+        <effect author="Scirra" id="warpradial">Warp Radial</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Loader</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="_System">
+            <object-folder name="Icons">
+                <object-type name="Tilemap" sid="946029900738774">
+                    <plugin id="Tilemap" />
+                    <texture original-source="C:\Users\darselx\Downloads\neon_space_rainmeter___2_4___29_09_2017__by_99villages-d7banug\pngGold\IcoPack1.png" />
+                    <tiles />
+                </object-type>
+            </object-folder>
+            <object-folder name="Backgrounds">
+                <object-type name="Wallpaper1" sid="160160323635515">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215548883574541" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\haas071\Downloads\source-code.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="NewPlayer" sid="302996278936982">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686353786765893" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\PROJECTS\Construct\Decrypt Sim\Mats\wp\wp_char.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="CBHash" sid="627469962111428">
+                <plugin id="CBhash" />
+            </object-type>
+            <object-type name="Keyboard" sid="751107087655024">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="873128571653347">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="NWjs" sid="239700602018989">
+                <plugin id="NodeWebkit" />
+            </object-type>
+            <object-type name="Function" sid="685599304210857">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="AJAX" sid="359058765815706">
+                <plugin id="AJAX" />
+            </object-type>
+            <object-type name="DialogBox" sid="461480534964455">
+                <plugin id="DialogBox" />
+            </object-type>
+            <object-type name="Browser" sid="150460644710713">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Mail" sid="982181303993588">
+                <plugin id="armaldio_mail" />
+            </object-type>
+            <object-type name="Audio" sid="651038528937993">
+                <plugin id="Audio" />
+            </object-type>
+        </object-folder>
+        <object-folder name="SystemScreens">
+            <object-folder name="LoginScreen">
+                <object-folder name="PlayerSelection">
+                    <object-type name="PlayerSelection_Headline" sid="496238063099216">
+                        <plugin id="rex_bbcodeText" />
+                        <effects>
+                            <effect-type name="GlowHorizontal">
+                                <effect id="glowhorizontal" />
+                            </effect-type>
+                            <effect-type name="GlowVertical">
+                                <effect id="glowvertical" />
+                            </effect-type>
+                            <effect-type name="ScanLines">
+                                <effect id="scanlines" />
+                            </effect-type>
+                        </effects>
+                    </object-type>
+                    <object-type name="PlayerSelection_TextButton" sid="998696366346353">
+                        <plugin id="rex_bbcodeText" />
+                        <instance-variables>
+                            <instance-variable name="ButtonID" sid="116314408143123" type="number" />
+                        </instance-variables>
+                    </object-type>
+                    <object-type name="PlayerSelection_User" sid="321230767795493">
+                        <plugin id="TextBox" />
+                    </object-type>
+                    <object-type name="PlayerSelection_Pass" sid="359351890013688">
+                        <plugin id="TextBox" />
+                    </object-type>
+                    <object-type name="PlayerSelection_LoginButon" sid="567438198203711">
+                        <plugin id="Button" />
+                    </object-type>
+                    <object-type name="PlayerSelection_NoUser" sid="523565846987010">
+                        <plugin id="TextBoxAddon" />
+                    </object-type>
+                    <object-type name="PlayerSelection_Headline2" sid="567655392840690">
+                        <plugin id="rex_bbcodeText" />
+                        <effects>
+                            <effect-type name="Exclusion">
+                                <effect id="exclusion" />
+                            </effect-type>
+                            <effect-type name="Difference">
+                                <effect id="difference" />
+                            </effect-type>
+                            <effect-type name="GlowHorizontal">
+                                <effect id="glowhorizontal" />
+                            </effect-type>
+                            <effect-type name="GlowVertical">
+                                <effect id="glowvertical" />
+                            </effect-type>
+                            <effect-type name="AlphaClamp">
+                                <effect id="alphaclamp" />
+                            </effect-type>
+                            <effect-type name="Vibrance">
+                                <effect id="vibrance" />
+                            </effect-type>
+                        </effects>
+                    </object-type>
+                    <object-type name="PlayerSelection_Spark2" sid="279619892183655">
+                        <plugin id="Sprite" />
+                        <effects>
+                            <effect-type name="SoftLight">
+                                <effect id="softlight" />
+                            </effect-type>
+                            <effect-type name="GlowHorizontal">
+                                <effect id="glowhorizontal" />
+                            </effect-type>
+                            <effect-type name="GlowVertical">
+                                <effect id="glowvertical" />
+                            </effect-type>
+                            <effect-type name="AdjustHSL">
+                                <effect id="hsladjust" />
+                            </effect-type>
+                            <effect-type name="Subtract">
+                                <effect id="subtract" />
+                            </effect-type>
+                            <effect-type name="Warp">
+                                <effect id="warp" />
+                            </effect-type>
+                            <effect-type name="WarpRadial">
+                                <effect id="warpradial" />
+                            </effect-type>
+                            <effect-type name="GlowHorizontal2">
+                                <effect id="glowhorizontal" />
+                            </effect-type>
+                            <effect-type name="GlowVertical2">
+                                <effect id="glowvertical" />
+                            </effect-type>
+                            <effect-type name="Pixellate">
+                                <effect id="pixellate" />
+                            </effect-type>
+                            <effect-type name="ColorHalftone">
+                                <effect id="colorhalftone" />
+                            </effect-type>
+                        </effects>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236531782621254" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.502825" original-source="C:\Users\haas071\Downloads\Decrypt Sim\mats\xport\spark.png">
+                                    <collision-poly>
+                                        <point x="0.323944" y="0.519774" />
+                                        <point x="0.5" y="0.231638" />
+                                        <point x="0.672535" y="0.525424" />
+                                        <point x="0.683099" y="0.497175" />
+                                        <point x="0.676056" y="0.480226" />
+                                        <point x="0.5" y="0.875706" />
+                                        <point x="0.320423" y="0.485876" />
+                                        <point x="0.327465" y="0.497175" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="PlayerSelection_Logo" sid="896021785976066">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="376612365700365" speed="5">
+                                <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\haas071\Downloads\Decrypt Sim\mats\128dx-logo1.png">
+                                    <collision-poly>
+                                        <point x="0.342466" y="0.195313" />
+                                        <point x="0.493151" y="0.03125" />
+                                        <point x="0.657534" y="0.195313" />
+                                        <point x="0.808219" y="0.5" />
+                                        <point x="0.630137" y="0.789063" />
+                                        <point x="0.493151" y="0.976563" />
+                                        <point x="0.191781" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Loader" sid="192971160319147">
+                        <plugin id="c2loader" />
+                    </object-type>
+                </object-folder>
+                <object-folder name="PlayerCreation">
+                    <object-type name="PlayerCreation_BG" sid="733285074447399">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="412496003261291" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.500589" original-source="C:\Users\haas071\Desktop\Decrypt Sim\Mats\wp\hacking-profit.jpg" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="PlayerCreation_Label" sid="747766218271212">
+                        <plugin id="TextBoxAddon" />
+                        <instance-variables>
+                            <instance-variable name="LabelID" sid="403691947654396" type="number" />
+                        </instance-variables>
+                    </object-type>
+                    <object-type name="PlayerCreation_Name" sid="606777720017760">
+                        <plugin id="TextBoxAddon" />
+                    </object-type>
+                    <object-type name="PlayerCreation_Mail" sid="429705349697854">
+                        <plugin id="TextBoxAddon" />
+                    </object-type>
+                    <object-type name="PlayerCreation_Passwd1" sid="987163678958063">
+                        <plugin id="TextBoxAddon" />
+                    </object-type>
+                    <object-type name="PlayerCreation_Passwd2" sid="803669947187189">
+                        <plugin id="TextBoxAddon" />
+                    </object-type>
+                    <object-type name="PlayerCreation_AGB" sid="895699048598606">
+                        <plugin id="Button" />
+                    </object-type>
+                    <object-type name="PlayerCreation_AGBFrame" sid="605378558785947">
+                        <plugin id="HTML_iFrame_Pode" />
+                    </object-type>
+                    <object-type name="PlayerCreation_Senden" sid="244119202997281">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="30" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225654970193535" speed="20">
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.501767" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="PlayerCreation_Back" sid="913179201371453">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Flash" sid="970600774057879">
+                                <behavior id="Flash" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589067720972565" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.402439" original-source="C:\PROJECTS\Construct\Decrypt Sim\Mats\xport\left-bold-arrow.png">
+                                    <collision-poly>
+                                        <point x="0.359649" y="0.207317" />
+                                        <point x="0.640351" y="0.207317" />
+                                        <point x="0.991228" y="0.402439" />
+                                        <point x="0.885965" y="0.939024" />
+                                        <point x="0.5" y="0.402439" />
+                                        <point x="0.5" y="0.402439" />
+                                        <point x="0.0789474" y="0.402439" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type global="1" name="PlayerCreation_Switch" sid="647982038515972">
+                        <plugin id="wastrel_switchcase" />
+                    </object-type>
+                    <object-type name="PlayerCreation_RegOk" sid="537152750635896">
+                        <plugin id="TextBoxAddon" />
+                    </object-type>
+                </object-folder>
+            </object-folder>
+            <object-folder name="LoadingScreen">
+                <object-type name="LoadingBar_Logo" sid="857542206199234">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="GlowHorizontal">
+                            <effect id="glowhorizontal" />
+                        </effect-type>
+                        <effect-type name="GlowVertical">
+                            <effect id="glowvertical" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="800669342611082" speed="5">
+                            <frame duration="1" hotspotX="0.438356" hotspotY="0.5" original-source="C:\Users\haas071\Downloads\Decrypt Sim\mats\256dx-logo1.png">
+                                <collision-poly>
+                                    <point x="0.260787" y="0.16899" />
+                                    <point x="0.432745" y="0.00348432" />
+                                    <point x="0.604703" y="0.16899" />
+                                    <point x="0.748001" y="0.5" />
+                                    <point x="0.576043" y="0.81446" />
+                                    <point x="0.432745" y="0.996516" />
+                                    <point x="0.318107" y="0.797909" />
+                                    <point x="0.117489" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LoadingBar_BG" sid="515657104191225">
+                    <plugin id="TiledBg" />
+                    <effects>
+                        <effect-type name="Exclusion">
+                            <effect id="exclusion" />
+                        </effect-type>
+                        <effect-type name="Screen">
+                            <effect id="screen" />
+                        </effect-type>
+                        <effect-type name="Sharpen">
+                            <effect id="sharpen" />
+                        </effect-type>
+                        <effect-type name="AdjustHSL">
+                            <effect id="hsladjust" />
+                        </effect-type>
+                    </effects>
+                    <texture original-source="C:\Users\darselx\Dropbox\Decrypt Sim\mats\wp\loadingscreen1.png" />
+                </object-type>
+                <object-type name="LoadingBar_Topbar" sid="686039185622796">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803652736037381" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LoadingBar_Loader" sid="825521672454538">
+                    <plugin id="TiledBg" />
+                    <effects>
+                        <effect-type name="GlowHorizontal">
+                            <effect id="glowhorizontal" />
+                        </effect-type>
+                        <effect-type name="GlowVertical">
+                            <effect id="glowvertical" />
+                        </effect-type>
+                    </effects>
+                    <texture original-source="C:\Users\haas071\Downloads\Decrypt Sim\mats\xport\Loading_Sign.png" />
+                </object-type>
+                <object-type name="LoadingBar_Percentage" sid="314981470499507">
+                    <plugin id="Text" />
+                    <effects>
+                        <effect-type name="GlowHorizontal">
+                            <effect id="glowhorizontal" />
+                        </effect-type>
+                        <effect-type name="GlowVertical">
+                            <effect id="glowvertical" />
+                        </effect-type>
+                    </effects>
+                </object-type>
+                <object-type name="LoadingBar_BG2" sid="324671898619371">
+                    <plugin id="TiledBg" />
+                    <texture original-source="C:\Users\darselx\Dropbox\Decrypt Sim\mats\wp\loadingscreen1.png" />
+                </object-type>
+                <object-type name="LoadingBar_LoadingCircle" sid="531577478482391">
+                    <plugin id="c2loader" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="SubWindow">
+            <object-folder name="FileOpener">
+                <object-type name="OpenFile" sid="831048771941466">
+                    <plugin id="filechooser" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="867504158823660">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="FileOpener_MG" sid="754840474616749">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="382455923469844">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587691317420455" speed="5">
+                            <frame duration="1" hotspotX="0.503049" hotspotY="0.781818" original-source="C:\Users\haas071\Desktop\xport\Top1.png">
+                                <collision-poly>
+                                    <point x="0.503049" y="0.945455" />
+                                    <point x="0.775915" y="0.763636" />
+                                    <point x="0.932927" y="0.454545" />
+                                    <point x="0.503049" y="0.981818" />
+                                    <point x="0.0731707" y="0.454545" />
+                                    <point x="0.230183" y="0.763636" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FileOpener_Headline" sid="752698058890974">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="761524523016997">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="FileOpener_Background" sid="498491153738332">
+                    <plugin id="NinePatch" />
+                    <instance-variables>
+                        <instance-variable name="PosX" sid="585245675722688" type="number" />
+                        <instance-variable name="PosY" sid="478983447821841" type="number" />
+                        <instance-variable name="FileName" sid="607685178883384" type="string" />
+                        <instance-variable name="FileSize" sid="920163611284690" type="number" />
+                        <instance-variable name="FileHash" sid="392383844253594" type="string" />
+                        <instance-variable name="FilePath" sid="767962062444213" type="string" />
+                    </instance-variables>
+                    <texture original-source="C:\Users\haas071\Desktop\xport\Window_BG3.png" />
+                </object-type>
+                <object-type name="FileOpener_Close" sid="942225005560575">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="867932701993683">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235435070022151" speed="5">
+                            <frame duration="1" hotspotX="0.511111" hotspotY="0.510204" original-source="C:\Users\haas071\Desktop\xport\Close_1.png">
+                                <collision-poly>
+                                    <point x="0.177778" y="0.204082" />
+                                    <point x="0.511111" y="0.0816327" />
+                                    <point x="0.822222" y="0.22449" />
+                                    <point x="0.933333" y="0.510204" />
+                                    <point x="0.822222" y="0.795918" />
+                                    <point x="0.511111" y="0.918367" />
+                                    <point x="0.2" y="0.795918" />
+                                    <point x="0.0666667" y="0.510204" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FileOpener_BG_Wallpaper" sid="422867687823248">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="972804554600414">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="294771021814217" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\haas071\Downloads\fowp.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="TextWindow">
+                <object-folder name="Graphics">
+                    <object-type name="CMD_Background" sid="398083339652574">
+                        <plugin id="NinePatch" />
+                        <texture original-source="C:\Users\haas071\Desktop\xport\MainFrameBG.png" />
+                    </object-type>
+                    <object-type name="CMD_Background2" sid="248205547074422">
+                        <plugin id="NinePatch" />
+                        <texture original-source="C:\Users\haas071\Desktop\xport\MainFrameBG.png" />
+                    </object-type>
+                </object-folder>
+                <object-type name="CMD_TextFeld" sid="752201585658219">
+                    <plugin id="TextBoxAddon" />
+                </object-type>
+                <object-type name="CMD_CommandLine" sid="360237541196707">
+                    <plugin id="TextBoxAddon" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout-folder name="SystemScreens">
+            <layout-folder name="LoadingScreen">
+                <layout>Loader.xml</layout>
+            </layout-folder>
+            <layout-folder name="LoginScreen">
+                <layout>PlayerAuswahl.xml</layout>
+            </layout-folder>
+        </layout-folder>
+        <layout-folder name="Ingame">
+            <layout>CommandScreen.xml</layout>
+        </layout-folder>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="Functions">
+            <event-folder name="SystemFunctions">
+                <event-sheet>ApiKeyGenerator.xml</event-sheet>
+                <event-sheet>WriteLines.xml</event-sheet>
+            </event-folder>
+            <event-folder name="OpenFile">
+                <event-sheet>OpenFile_EV.xml</event-sheet>
+            </event-folder>
+            <event-folder name="Commands">
+                <event-sheet>_commands.xml</event-sheet>
+                <event-sheet>_clearcmdfeld.xml</event-sheet>
+                <event-sheet>cmd_echo.xml</event-sheet>
+                <event-sheet>cmd_cls.xml</event-sheet>
+                <event-sheet>cmd_save.xml</event-sheet>
+                <event-sheet>cmd_web.xml</event-sheet>
+            </event-folder>
+            <event-folder name="AutoSave">
+                <event-sheet>AutoSave.xml</event-sheet>
+            </event-folder>
+        </event-folder>
+        <event-folder name="Ingame">
+            <event-sheet>CommandScreen.xml</event-sheet>
+        </event-folder>
+        <event-folder name="SystemScreens">
+            <event-folder name="LoginScreen">
+                <event-sheet>NewPlayer.xml</event-sheet>
+                <event-sheet>PlayerSelection.xml</event-sheet>
+            </event-folder>
+            <event-folder name="LoadingScreen">
+                <event-sheet>LoadingScreen.xml</event-sheet>
+            </event-folder>
+        </event-folder>
+    </event-folder>
+    <global-instances>
+        <global-instance type="CBHash" uid="2" />
+        <global-instance type="Mouse" uid="7" />
+        <global-instance type="Function" uid="9" />
+        <global-instance type="Keyboard" uid="6" />
+        <global-instance type="NWjs" uid="13" />
+        <global-instance type="AJAX" uid="26" />
+        <global-instance type="DialogBox" uid="28" />
+        <global-instance type="Browser" uid="15" />
+        <global-instance type="Mail" uid="31" />
+        <global-instance type="Audio" uid="58">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="ANGL-FireBurst.m4a" />
+        <file name="ANGL-FireBurst.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+            <file name="icon-512.png" />
+        </file-folder>
+        <file-folder name="Mail" />
+        <file-folder name="php">
+            <file-folder name="functions">
+                <file name="activation.php" />
+                <file name="dbconnect.php" />
+                <file name="save.php" />
+            </file-folder>
+            <file-folder name="LoginAndVerification">
+                <file name="_test.php" />
+                <file name="_usr.php" />
+                <file name="crusr.php" />
+                <file name="settimestamp.php" />
+                <file name="usrmailcheck.php" />
+                <file name="xmail.php" />
+                <file name="tob64.php" />
+            </file-folder>
+        </file-folder>
+        <file-folder name="Text">
+            <file name="agb.txt" />
+            <file name="agb.html" />
+        </file-folder>
+    </files-folder>
+</c2project>

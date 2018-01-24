@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">Loader</layout>
+        <layout order="2">CommandScreen</layout>
+        <layout order="7">PlayerAuswahl</layout>
+        <event-sheet order="1">PlayerSelection</event-sheet>
+        <event-sheet order="3">CommandScreen</event-sheet>
+        <event-sheet order="4">AutoSave</event-sheet>
+        <event-sheet order="5">ApiKeyGenerator</event-sheet>
+        <event-sheet order="6">LoadingScreen</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/_System/" />
+        <folder expanded="0" path="object-folder/_System/Icons/" />
+        <folder expanded="0" path="object-folder/_System/Backgrounds/" />
+        <folder expanded="1" path="object-folder/SystemScreens/" />
+        <folder expanded="1" path="object-folder/SystemScreens/LoginScreen/" />
+        <folder expanded="1" path="object-folder/SystemScreens/LoginScreen/PlayerSelection/" />
+        <folder expanded="0" path="object-folder/SystemScreens/LoginScreen/PlayerCreation/" />
+        <folder expanded="0" path="object-folder/SystemScreens/LoadingScreen/" />
+        <folder expanded="1" path="object-folder/SubWindow/" />
+        <folder expanded="1" path="object-folder/SubWindow/FileOpener/" />
+        <folder expanded="1" path="object-folder/SubWindow/TextWindow/" />
+        <folder expanded="1" path="object-folder/SubWindow/TextWindow/Graphics/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/SystemScreens/" />
+        <folder expanded="0" path="layout-folder/SystemScreens/LoadingScreen/" />
+        <folder expanded="1" path="layout-folder/SystemScreens/LoginScreen/" />
+        <folder expanded="1" path="layout-folder/Ingame/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Functions/" />
+        <folder expanded="0" path="event-folder/Functions/SystemFunctions/" />
+        <folder expanded="0" path="event-folder/Functions/OpenFile/" />
+        <folder expanded="0" path="event-folder/Functions/Commands/" />
+        <folder expanded="1" path="event-folder/Functions/AutoSave/" />
+        <folder expanded="0" path="event-folder/Ingame/" />
+        <folder expanded="1" path="event-folder/SystemScreens/" />
+        <folder expanded="1" path="event-folder/SystemScreens/LoginScreen/" />
+        <folder expanded="1" path="event-folder/SystemScreens/LoadingScreen/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/php/functions/" />
+        <folder expanded="1" path="file-folder/php/LoginAndVerification/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Mail/" />
+        <folder expanded="1" path="file-folder/php/" />
+        <folder expanded="1" path="file-folder/Text/" />
+        <folder expanded="1" path="animation-folder/Wallpaper1/" />
+        <folder expanded="1" path="animation-folder/NewPlayer/" />
+        <folder expanded="1" path="animation-folder/PlayerSelection_Spark2/" />
+        <folder expanded="1" path="animation-folder/PlayerSelection_Logo/" />
+        <folder expanded="1" path="animation-folder/PlayerCreation_BG/" />
+        <folder expanded="1" path="animation-folder/PlayerCreation_Senden/" />
+        <folder expanded="1" path="animation-folder/PlayerCreation_Back/" />
+        <folder expanded="1" path="animation-folder/LoadingBar_Logo/" />
+        <folder expanded="1" path="animation-folder/LoadingBar_Topbar/" />
+        <folder expanded="1" path="animation-folder/FileOpener_MG/" />
+        <folder expanded="1" path="animation-folder/FileOpener_Close/" />
+        <folder expanded="1" path="animation-folder/FileOpener_BG_Wallpaper/" />
+    </folders-expanded>
+</c2uistate>
